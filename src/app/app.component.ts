@@ -11,6 +11,7 @@ export class AppComponent {
   registrado = false;
   nombre = '';
   apellido ='';
+  cargo='';
   
   registarUSuario(){
     this.registrado=true;
