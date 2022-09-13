@@ -4,4 +4,9 @@
   <input type="text" name="apellido" [(ngModel)] ="apellido"> <br>
   <input type="submit" value="registrar" (click)="registarUSuario()"> <br>
 </form>
-<p *ngIf = "registrado" >{{mensaje}} con el nombre de {{nombre}} y apellido {{apellido}}</p>
+<p *ngIf = "registrado; else sinRegistrar">{{mensaje}} con el nombre de {{nombre}} y apellido {{apellido}}</p>
+
+<ng-template #sinRegistrar>
+  <p>nadie registrado</p>
+
+</ng-template>
